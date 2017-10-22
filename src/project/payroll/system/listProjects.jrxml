@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="listProjects" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8ee66f9f-85d7-4825-b876-be0954c17c4e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM project]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<field name="architect" class="java.lang.String"/>
+	<field name="owner" class="java.lang.String"/>
+	<field name="location" class="java.lang.String"/>
+	<field name="date_started" class="java.sql.Date"/>
+	<field name="date_finished" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="37" uuid="d2feeb33-1984-4a31-8942-3f85df6af165"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MESAGON ENGINEERING BUILDERS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="37" width="572" height="22" uuid="21e9e5d4-d66d-494e-93cb-87678ecdb2a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[125 Paramound Ave., Lanang, Exec. Homes, Davao City]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="18" width="100" height="20" uuid="ad357a71-2852-4d6c-94d3-196c1698d9f4"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Project Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="18" width="100" height="20" uuid="94660ea4-0471-4c77-b856-62c22244c299"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="18" width="84" height="20" uuid="2774845a-3684-4811-9013-f391472408b9"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Archictect]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="18" width="100" height="20" uuid="96af6a26-52b1-4437-b6c7-fdf871e28ade"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Date Started]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="18" width="155" height="20" uuid="32d8e87f-a7a6-44a4-ae1a-ae4c90f03146"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Estimated Date Finished]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="16" width="100" height="20" uuid="8ce19d3c-b29e-41d7-8c95-c94527ce9852"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="16" width="100" height="20" uuid="012c43e3-fa7c-4889-adf4-e11f6027d9de"/>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="16" width="84" height="20" uuid="04657e44-0713-4e65-829e-5112be9fbf67"/>
+				<textFieldExpression><![CDATA[$F{architect}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="16" width="100" height="20" uuid="5d34cd83-62c3-4364-88bb-f70cc7257dae"/>
+				<textFieldExpression><![CDATA[$F{date_started}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="16" width="102" height="20" uuid="98c3825f-c2de-45ae-91f3-82c5c3f12625"/>
+				<textFieldExpression><![CDATA[$F{date_finished}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="11" width="572" height="1" uuid="f09ec8b2-0a84-46ed-9133-ca0159c0ffb8"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
